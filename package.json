@@ -1,0 +1,16 @@
+{
+  "name": "astraan-school",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace @astraan/web\" \"npm run dev --workspace @astraan/api\"",
+    "build": "npm run build --workspace @astraan/web && npm run build --workspace @astraan/api",
+    "lint": "npm run lint --workspace @astraan/web && npm run lint --workspace @astraan/api"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
